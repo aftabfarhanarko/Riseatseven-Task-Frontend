@@ -147,7 +147,7 @@ function ThreeDScrollTriggerRowImpl({
     >
       <motion.div
         className="inline-flex will-change-transform transform-gpu"
-        style={{ x: useTransform(x, (v) => ${-v}px) }}
+        style={{ x: useTransform(x, (v) => `${-v}px`) }}
       >
         {Array.from({ length: numCopies }).map((_, i) => (
           <div

@@ -51,14 +51,16 @@ const NavBar = () => {
           >
             <a
               href="#"
-              className={
+              className={`
                 relative text-[13px] font-semibold transition-all duration-300 flex items-center gap-1 group px-4 py-2 rounded-full
-                
-              }
+                ${item.name === "International" && isInternationalHovered 
+                  ? "bg-white text-black" 
+                  : "text-white/80 hover:text-white"}
+              `}
             >
               {item.name}
               {item.hasPlus && (
-                <span className={	ext-[10px] }>
+                <span className={`text-[10px] ${item.name === "International" && isInternationalHovered ? "text-black/40" : "text-white/40 group-hover:text-white"}`}>
                   +
                 </span>
               )}
